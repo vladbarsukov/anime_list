@@ -1,25 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useEffect} from 'react';
+import logo from './img/logoVladik.png'
+import styles from './App.module.css'
+import './App.module.css';
+import MainCard from "./components/main-card/main-card";
+import {getAnimeSeason} from "./services/actions/animeSeasonActions";
+import {useDispatch} from "./services/hook";
+import CardList from "./components/card-list/card-list";
+import {BrowserRouter, Route, Router, Routes, useSearchParams} from "react-router-dom";
+import Home from "./home/home";
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    const dispatch = useDispatch();
+
+    // useEffect(
+    //     () => {
+    //         dispatch(getAnimeSeason(1));
+    //     },
+    //     [dispatch]
+    // );
+
+    return (
+      <div className={styles.App}>
+        <BrowserRouter>
+            <Routes>
+                <Route path="/anime_list" element={<Home />} />
+                <Route path="/" element={<Home />} />
+            </Routes>
+        </BrowserRouter>
+      </div>
   );
 }
 

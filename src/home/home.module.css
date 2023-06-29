@@ -1,0 +1,57 @@
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 100px;
+    align-self: start;
+    height: 10vmin;
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+.header {
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Cabin, sans-serif;
+    font-size: calc(20px + 2vmin);
+    color: rgb(197,213,220);
+    width: 100%;
+
+}
+
+.main {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    font-family: Cabin, sans-serif;
+    padding-bottom: 50px;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.navText {
+    min-width: 10px;
+    font-family: Cabin, sans-serif;
+    color: rgb(197,213,220);
+}

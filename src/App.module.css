@@ -1,0 +1,7 @@
+.App {
+  text-align: center;
+  background-color: rgb(40,28,36);
+  min-height: 100vh;
+  position: relative;
+  width: 100%;
+}
