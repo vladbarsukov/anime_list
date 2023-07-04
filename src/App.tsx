@@ -11,7 +11,7 @@ const App: FC = () => {
       <div className={styles.App}>
         <BrowserRouter>
             <Routes>
-                <Route path="/anime_list/" element={<Home />} />
+                <Route path="/anime_list" element={<Home />} />
                 <Route path="/" element={<Home />} />
                 <Route path="/anime/:id" element={<AnimeInfo />} />
             </Routes>
