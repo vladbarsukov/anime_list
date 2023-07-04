@@ -1,0 +1,32 @@
+.container {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    /*background: #DC6175;*/
+    border-radius: 16px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    position: relative;
+    cursor: pointer;
+    width: 425px;
+    overflow: hidden;
+    margin-right: 40px;
+}
+
+.description {
+    width: 425px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text {
+    font-family: Cabin, sans-serif;
+    color: rgb(197,213,220);
+}

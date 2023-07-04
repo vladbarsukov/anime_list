@@ -19,6 +19,8 @@ export interface IGetAnimeSeasonFailed {
     readonly type: typeof GET_ANIME_SEASON_FAILED
 }
 
+
+
 export type TAnimeSeasonAction = IGetAnimeSeasonRequest | IGetAnimeSeasonSuccess | IGetAnimeSeasonFailed
 
 export const getAnimeSeason = (page: number) =>

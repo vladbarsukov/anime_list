@@ -1,12 +1,12 @@
 import React, {SyntheticEvent, useEffect, useState} from 'react';
 import styles from './home.module.css'
-import logo from "../img/logoVladik.png";
-import MainCard from "../components/main-card/main-card";
-import CardList from "../components/card-list/card-list";
+import logo from "../../img/logoVladik.png";
+import MainCard from "../../components/main-card/main-card";
+import CardList from "../../components/card-list/card-list";
 import {useSearchParams} from "react-router-dom";
-import Button from "../components/UI/button";
-import {getAnimeSeason} from "../services/actions/animeSeasonActions";
-import {useDispatch} from "../services/hook";
+import Button from "../../components/UI/button";
+import {getAnimeSeason} from "../../services/actions/animeSeasonActions";
+import {useDispatch} from "../../services/hook";
 
 const data = 'find some anime huh?'
 
@@ -16,7 +16,7 @@ const Home = () => {
     const dispatch = useDispatch();
     const pageQuery = searchParams.get('page')
 
-    const onClickForvard = (e: SyntheticEvent) => {
+    const onClickForward = (e: SyntheticEvent) => {
         if (pageQuery) {
             setCurrentPadge(+currentPage + 1)
         }
@@ -41,15 +41,15 @@ const Home = () => {
             <main className={styles.main}>
                 <MainCard/>
                 <nav className={styles.nav}>
-                    <Button textContent={'НАЗАД'} onClick={onClickBack }/>
+                    <Button textContent={'BACK'} onClick={onClickBack }/>
                     <h3 className={styles.navText}>{currentPage}</h3>
-                    <Button textContent={'ДАЛЬШЕ'} onClick={onClickForvard }/>
+                    <Button textContent={'NEXT'} onClick={onClickForward }/>
                 </nav>
                 <CardList/>
                 <nav className={styles.nav}>
-                    <Button textContent={'НАЗАД'} onClick={onClickBack }/>
+                    <Button textContent={'BACK'} onClick={onClickBack }/>
                     <h3 className={styles.navText}>{currentPage}</h3>
-                    <Button textContent={'ДАЛЬШЕ'} onClick={onClickForvard }/>
+                    <Button textContent={'NEXT'} onClick={onClickForward }/>
                 </nav>
             </main>
         </div>

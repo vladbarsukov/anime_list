@@ -1,4 +1,4 @@
-import React, {FC, useState} from 'react';
+import React, {FC} from 'react';
 import SmallCard from "../small-card/small-card";
 import styles from "./card-list.module.css"
 import {useSelector} from "../../services/hook";
