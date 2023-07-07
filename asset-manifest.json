@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/anime_list/static/css/main.06edff14.css",
-    "main.js": "/anime_list/static/js/main.9efa2a48.js",
+    "main.css": "/anime_list/static/css/main.bc712aa9.css",
+    "main.js": "/anime_list/static/js/main.5fcbc4c1.js",
     "static/media/animeWoman.png": "/anime_list/static/media/animeWoman.00261b57b636f0d6647e.png",
     "static/media/logoVladik.png": "/anime_list/static/media/logoVladik.12ba0b342f704ad2effa.png",
     "index.html": "/anime_list/index.html",
-    "main.06edff14.css.map": "/anime_list/static/css/main.06edff14.css.map",
-    "main.9efa2a48.js.map": "/anime_list/static/js/main.9efa2a48.js.map"
+    "main.bc712aa9.css.map": "/anime_list/static/css/main.bc712aa9.css.map",
+    "main.5fcbc4c1.js.map": "/anime_list/static/js/main.5fcbc4c1.js.map"
   },
   "entrypoints": [
-    "static/css/main.06edff14.css",
-    "static/js/main.9efa2a48.js"
+    "static/css/main.bc712aa9.css",
+    "static/js/main.5fcbc4c1.js"
   ]
 }
