@@ -1,10 +1,16 @@
 import axios from "axios";
 import {BASE_URL} from "./constants";
 
-export const getAnimeSeasonRequest = async (page: number) => {
-    return await axios.get(`${BASE_URL}/seasons/now?page=${page}`)
+// interface AnimeSeasonRequest {
+//     season: string
+//     year: string
+//     order: string
+//     limit: number
+// }
+export const getAnimeSeasonRequest = async (season: string, year: string, order: string, limit: number) => {
+    return await axios.get(`${BASE_URL}/animes?season=${season}_${year}&order=${order}&limit=${limit}`)
 }
 
 export const getAnimeByIdRequest = async (id: number) => {
-    return await axios.get(`${BASE_URL}/anime/${id}`)
+    return await axios.get(`${BASE_URL}/animes/${id}`)
 }

@@ -12,7 +12,7 @@ export interface IGetAnimeSeasonRequest {
 
 export interface IGetAnimeSeasonSuccess {
     readonly type: typeof GET_ANIME_SEASON_SUCCESS
-    readonly anime: IAnimeSeason
+    readonly anime: IAnimeSeason[]
 }
 
 export interface IGetAnimeSeasonFailed {
@@ -23,16 +23,16 @@ export interface IGetAnimeSeasonFailed {
 
 export type TAnimeSeasonAction = IGetAnimeSeasonRequest | IGetAnimeSeasonSuccess | IGetAnimeSeasonFailed
 
-export const getAnimeSeason = (page: number) =>
+export const getAnimeSeason = (season: string, year: string, order: string, limit: number) =>
     (dispatch: AppDispatch) =>{
         dispatch({
             type: GET_ANIME_SEASON_REQUEST
         });
-        getAnimeSeasonRequest(page)
+        getAnimeSeasonRequest(season, year, order, limit)
             .then(res => {
                 dispatch({
                     type: GET_ANIME_SEASON_SUCCESS,
-                    anime: res.data.data
+                    anime: res.data
                 });
             })
             .catch(error => {

@@ -6,7 +6,7 @@ import CardList from "../../components/card-list/card-list";
 import {useSearchParams} from "react-router-dom";
 import Button from "../../components/UI/button";
 import {getAnimeSeason} from "../../services/actions/animeSeasonActions";
-import {useDispatch} from "../../services/hook";
+import {useDispatch, useSelector} from "../../services/hook";
 
 const data = 'find some anime huh?'
 
@@ -16,8 +16,9 @@ const Home = () => {
     const dispatch = useDispatch();
     const pageQuery = searchParams.get('page')
 
+
     const onClickForward = (e: SyntheticEvent) => {
-        if (pageQuery) {
+        if (pageQuery && +currentPage < 4) {
             setCurrentPadge(+currentPage + 1)
         }
     }
@@ -29,7 +30,7 @@ const Home = () => {
 
     useEffect(() => {
         setSearchParams({page: currentPage.toString()})
-        dispatch(getAnimeSeason(+currentPage));
+        dispatch(getAnimeSeason('spring', '2023', 'ranked', 50));
     }, [currentPage])
 
     return (
@@ -45,7 +46,7 @@ const Home = () => {
                     <h3 className={styles.navText}>{currentPage}</h3>
                     <Button textContent={'NEXT'} onClick={onClickForward }/>
                 </nav>
-                <CardList/>
+                <CardList page={currentPage}/>
                 <nav className={styles.nav}>
                     <Button textContent={'BACK'} onClick={onClickBack }/>
                     <h3 className={styles.navText}>{currentPage}</h3>

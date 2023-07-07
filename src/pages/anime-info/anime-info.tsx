@@ -10,7 +10,7 @@ const AnimeInfo = () => {
         state => state.AnimeByIdReducer
     );
     useEffect(()=> {
-        console.log(page.id)
+        console.log(anime)
         if (page.id) {
             dispatch(getAnimeById(+page.id))
         }
@@ -22,10 +22,11 @@ const AnimeInfo = () => {
 
         <div className={styles.container}>
             <div className={styles.card}>
-                <img src={anime.images.webp.large_image_url} alt={'img'}/>
+                <img src={`https://shikimori.one/${anime.image.original}`} alt={'img'}/>
             </div>
             <div className={styles.description}>
-                <h1 className={styles.text}>{anime.title}</h1>
+                <h1 className={styles.text}>{anime.russian}</h1>
+                <p>{anime.description}</p>
             </div>
         </div>
     ) : <></>

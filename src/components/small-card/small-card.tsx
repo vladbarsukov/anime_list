@@ -11,13 +11,14 @@ const SmallCard: FC<TAnimeListProps> = ({anime}) => {
     const naviagate = useNavigate()
 
     const onClick = () => {
-        naviagate(`/anime/${anime.mal_id}`)
+        naviagate(`/anime/${anime.id}`)
+        console.log(anime.image.original)
     }
 
     return (
         <div onClick={onClick} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} className={styles.container}>
-            <img className={isHovered ? styles.hovered:  styles.img} src={anime.images.webp.image_url} alt={'постер'}/>
-            {isHovered ? (<p className={styles.title}>{anime.title}</p>) : (<></>)}
+            <img className={isHovered ? styles.hovered:  styles.img} src={`https://shikimori.one/${anime.image.original}`} alt={'постер'}/>
+            {isHovered ? (<p className={styles.title}>{anime.russian}</p>) : (<></>)}
         </div>
     );
 };

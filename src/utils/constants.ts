@@ -1,1 +1,1 @@
-export const BASE_URL: "https://api.jikan.moe/v4" = "https://api.jikan.moe/v4"
+export const BASE_URL: "https://shikimori.one/api" = "https://shikimori.one/api"

@@ -18,9 +18,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: Cabin, sans-serif;
     font-size: calc(20px + 2vmin);
-    color: rgb(197,213,220);
     width: 100%;
 
 }
@@ -30,8 +28,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: auto;
-    font-family: Cabin, sans-serif;
     padding-bottom: 50px;
 }
 
@@ -52,6 +48,4 @@
 
 .navText {
     min-width: 10px;
-    font-family: Cabin, sans-serif;
-    color: rgb(197,213,220);
 }

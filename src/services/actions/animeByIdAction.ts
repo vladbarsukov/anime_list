@@ -16,7 +16,7 @@ export interface IGetAnimeByIdRequest {
 
 export interface IGetAnimeByIdSuccess {
     readonly type: typeof GET_ANIME_BY_ID_SUCCESS
-    readonly anime: IAnimeSeason
+    readonly anime: any
 }
 
 export interface IGetAnimeByIdFailed {
@@ -34,7 +34,7 @@ export const getAnimeById = (page: number) =>
             .then(res => {
                 dispatch({
                     type: GET_ANIME_BY_ID_SUCCESS,
-                    anime: res.data.data
+                    anime: res.data
                 });
             })
             .catch(error => {
