@@ -16,17 +16,20 @@ const AnimeInfo = () => {
         }
     },[page.id])
 
-
-
     return anime ? (
 
         <div className={styles.container}>
             <div className={styles.card}>
-                <img src={`https://shikimori.one/${anime.image.original}`} alt={'img'}/>
+                <img className={styles.img} src={`https://shikimori.one/${anime.image.original}`} alt={'img'}/>
             </div>
             <div className={styles.description}>
                 <h1 className={styles.text}>{anime.russian}</h1>
-                <p>{anime.description}</p>
+                <p>{`Рейтинг: ${anime.score}`}</p>
+                <p>{`Тип: ${anime.kind.toUpperCase()}`}</p>
+                <p>{`Эпизоды: ${anime.episodes}`}</p>
+                <p>{`Следующий эпизод: ${anime.next_episode_at}`}</p>
+                <p>{anime.description ? anime.description.replace(/\[.*?]|]/g, '')
+                    : "описание отсутствует"}</p>
             </div>
         </div>
     ) : <></>

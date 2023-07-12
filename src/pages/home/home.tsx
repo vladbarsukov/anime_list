@@ -30,7 +30,7 @@ const Home = () => {
 
     useEffect(() => {
         setSearchParams({page: currentPage.toString()})
-        dispatch(getAnimeSeason('spring', '2023', 'ranked', 50));
+        dispatch(getAnimeSeason('summer', '2023', 'ranked', 50));
     }, [currentPage])
 
     return (

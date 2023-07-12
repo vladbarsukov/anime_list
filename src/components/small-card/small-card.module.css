@@ -11,7 +11,10 @@
     width: 200px;
     align-self: center;
     overflow: hidden;
+    object-fit: cover;
+
     border-radius: 16px;
+
 }
 
 .hovered {
